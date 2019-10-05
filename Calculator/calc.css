@@ -1,0 +1,441 @@
+* {
+  box-sizing: border-box;
+  background-color: LightGrey;
+}
+
+body {
+	font-family: NimbusSanL, Arial, sans-serif;
+	text-align: center;
+	color:#202020;
+	background-color:Silver;
+}
+
+i {
+  font-family: cursive;
+  background-color: inherit;
+}
+
+div {
+	border:1px solid SlateGrey;
+	border-radius:5px;
+  margin: 2vh 2vw 2vh 2vw;
+}
+
+div.innnerFace {
+  margin-left: 0.1vh;
+  margin-top: 0.1vh;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 21.925vw;
+  height: 78.95vh;
+  background: #B4A89A;
+  border-color: rgb(220, 211, 194);
+  border-radius: 0.5vh;
+  border-style: outset;
+  border-top-width: medium;
+  border-bottom-width: 1.5vh;
+  border-left-width: 1.5vh;
+  border-right-width: 1.5vh;
+}
+
+div.displayBorder {
+  background-color: rgb(220, 211, 194);
+  height: 13vh;
+  width: 18.9vw;
+  margin-top: 1.5vh;
+  margin-left: 1.5vh;
+  border-style: solid;
+  border-color: black;
+  border-width: thick;
+  border-radius: 1vh;
+  margin-bottom: 1vh;
+}
+
+/*@font-face {
+  local seven_segment font. Set active
+  if link in css style becomes obsolete
+  font-family: seven_segment;
+  src: url(seven_segment.ttf);
+}*/
+
+.displayBorder > p {
+  background-color: rgb(118, 126, 15);
+  border-style: inset;
+  border-color: rgb(66,63,62);
+  border-top-width: 1vh;
+  border-left-width: 0.5vw;
+  border-bottom-width: 1vh;
+  border-right-width: 0.5vw;
+  border-radius: 0.5vh;
+  margin-left: 0.4vh;
+  margin-top: 0.3vh;
+  color: Black;
+  font-size: 5.25vh;
+  font-family: 'Segment7Standard';
+  width: 18vw;
+  height: 11.4vh;
+  padding: 2.5vh 1vw; /* (bottom/top, left,right) */
+  text-align: right;
+  overflow-x: auto;
+}
+
+div.logo {
+  background-color: inherit;
+  border: none;
+  width: 19vw;
+  margin-top: 0;
+  margin-left: 0.5vw;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+div.logo0 {
+  background-color: black;
+  display: inline;
+  width: 9.5vw;
+  background-color: inherit;
+  border: none;
+  border-bottom-style: solid;
+  border-bottom-color: black;
+  border-bottom-width: 0.15vh;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+div.logo1 {
+  width: 9vw;
+  display: inline;
+  background-color: inherit;
+  border: none;
+  font-family: verdana;
+  font-size: 2.5vh;
+  font-weight: bold;
+  text-align: right;
+  float: right;
+  margin-right: 0.5vw;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
+  padding: 0;
+  white-space: nowrap;
+}
+
+div.logo1 > i {
+  font-size: 1vw;
+}
+
+
+div.logo2 {
+  display: inline;
+  background-color: inherit;
+  border: none;
+  position: relative;
+  font-family: verdana;
+  font-size: 1.2vh;
+  font-weight: bold;
+  color: rgb(1, 112, 124);
+  text-align: right;
+  float: right;
+  margin-top: 0vh;
+  margin-right: 0.2vw;
+  margin-bottom: 1vh;
+}
+
+.topLabels {
+  display: grid;
+  grid-template-columns: 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw
+                         0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw
+                         0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw
+                         0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw
+                         0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw 0.5vw;
+  background-color: inherit;
+  width: 15vw;
+  border: none;
+  margin-top: 1vh;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+.tL1 {
+  grid-column: 5 / span 4;
+  border: none;
+}
+
+body > div > div > div.topLabels > div.tL2 {
+  color: rgb(1, 112, 124);
+}
+
+.tL2 {
+  grid-column: 10 / span 5;
+  border: none;
+}
+
+.tL3 {
+  padding-left: 0;
+  grid-column: 16 / span 12;
+  border: none;
+}
+
+#tLT, #tLTB {
+  background-color: inherit;
+  font-size: 1.2vh;
+}
+
+.tL1 p, .tL2 p {
+  text-align: center;
+}
+
+.tL3 p {
+  text-align: left;
+}
+
+.tL1 p, .tL2 p, .tL3 p {
+  background-color: inherit;
+  color: rgb(234, 234, 224);
+  margin: 0.2vh;
+  font-size: 1vh;
+}
+
+.topLabels > div {
+  background-color: inherit;
+  font-size: 1.4vh;
+  margin: 0;
+  color: black;
+  font-family: verdana;
+  font-weight: bold;
+}
+
+.midGrid {
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.7vh;
+  margin-top: 0vh;
+  margin-left: 0.1vw;
+  width: 19.9vw;
+  height: 22.75vh;
+  background-color: Black;
+  box-sizing: border-box;
+  padding: 1.8vh 0vw 1vh 0vw;
+  margin-bottom: 0;
+}
+
+.midGrid sup, .midGrid span {
+  background-color: inherit;
+  color: rgb(203, 45, 11);
+  font-size: 1vh;
+}
+
+body > div > div > div.midGrid > div > div:nth-child(6) > i,
+body > div > div > div.midGrid > div > div:nth-child(13) > i {
+  font-family: sans-serif;
+  font-size: 1.1vh;
+}
+
+.midGridBckgrnd {
+  width: 19vw;
+  height: 20.1vh;
+  display: grid;
+  grid-gap: 0.1vw;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-rows: 6.1vh 6.1vh 6.1vh;
+  background-color: DarkGrey;
+  margin-left: 0.6vw;
+  margin-top: 0;
+  margin-bottom: 0.55vh;
+  border-radius: 0;
+  border-width: 1.1vh 0.9vw 1vh 0.5vw;
+  border-color: black;
+}
+
+.powButt, .midButt, .buttSpec {
+  color: LightGrey;
+  background-color: black;
+  border-color: black;
+  border-radius: 0;
+  float: left;
+  width: 2.854vw;
+  height: 6vh;
+  margin: 0;
+  padding-top: 0.2vh;
+  text-align: center;
+  line-height: 10px;
+  font-size: 1.1vh;
+  font-weight: bold;
+  color: DarkGrey;
+}
+
+.powButt {
+  display: grid;
+  grid-template-columns: 40% 45%;
+  grid-template-rows: auto;
+  grid-gap: 0;
+}
+
+.dblock1 {
+  height: 4vh;
+  width: 0.2vw;
+  background-color: rgba(32, 30, 30);
+  border-color: rgb(51, 54, 54);
+  border-radius: 0.2vh;
+  border-style: outset;
+  border-width: 0.15vw;
+  float: left;
+  margin-top: 0.7vh;
+  margin-left: 0.2vw;
+}
+
+.dblock1 button:hover, .on button:hover {
+  background-color: DarkGrey;
+}
+
+.dblock2 {
+  background-color: rgb(10, 11, 11);
+  width: 0.9vw;
+  height: 3.8vh;
+  margin: 0;
+  margin-top: 0.6vh;
+  margin-left: 0.1vw;
+  border-radius: 0.1vh;
+  border-color: rgb(51, 54, 54);
+  border-style: inset;
+  z-index: 0;
+}
+
+/* styling for when the power putton is
+   toggled ON */
+.on {
+  height: 4vh;
+  width: 0.2vw;
+  background-color: rgba(32, 30, 30);
+  border-color: rgb(51, 54, 54);
+  border-radius: 0.2vh;
+  border-style: outset;
+  border-width: 0.15vw;
+  float: left;
+  margin-top: 0.7vh;
+  margin-left: 1.1vw;
+  z-index: 1; /* z-index allows us to set stack precedence */
+}
+
+.midButt > button, .buttSpec > button {
+  width: 1.8vw;
+  height: 1.8vh;
+  border-radius: 0.2vh;
+  border-width: medium;
+  border-style: outset;
+  margin-top: 0.8vh;
+  margin-bottom: 0.6vh;
+  background-color: rgb(234, 233, 210);
+}
+
+.buttSpec {
+  padding-top: 0.6vh;
+  text-align: center;
+}
+
+#mg2, #mg3, #mg4 {
+  font-weight: bold;
+  font-size: 1.1vh;
+}
+
+#mg2, #mg4, #mg5, #mg7, #mg13, #ll {
+  font-family: sans-serif;
+  font-size: 1.1vh;
+}
+
+#mg2, #mg4, #mg5, #mg7, #mg13 {
+  color: rgb(203, 45, 11);
+
+}
+
+#ll, #ll sup {
+  color: rgb(1, 112, 124);
+}
+
+#spec {
+  color: rgb(1, 112, 124);
+  font-size: 0.8vw;
+}
+
+#ff sup {
+  color: black;
+}
+
+#mg3, #mg6 sup {
+  color: DarkGrey;
+}
+
+#mg5, #ll {
+  font-style: italic;
+}
+
+.mNA > button:hover {
+  background-color: rgb(234, 233, 210);
+}
+
+.calcKeypad {
+  height: 23vh;
+  display: grid;
+  grid-gap: 1.2vh;
+  grid-template-columns: 3vw 3vw 3vw 3vw 3vw;
+  grid-template-rows: 5.5vh 5.5vh 5.5vh 5.5vh;
+  background-color: inherit;
+  border: none;
+  margin-top: 0.25vh;
+  margin-left: 1.4vw;
+}
+
+.calcKeypad > button {
+  width: 3vw;
+  height: 5vh;
+  background-color: black;
+  color: LightGrey;
+  border-radius: 1.5vh;
+  border-color: rgb(123, 131, 131);
+  border-style: outset;
+  border-width: 0.15vw;
+  text-align: center;
+  font-size: 2.5vh;
+  font-weight: bold;
+  margin-top: 0.5vh;
+  margin-left: 0vw;
+}
+
+button:hover, button:active {
+	background-color: DarkGrey;
+}
+
+.calcKeypad > button.NA:hover {
+  background-color: black;
+}
+
+#sp p {
+  font-size: 2vh;
+  text-align: center;
+  background-color: inherit;
+  margin-top: 0.7vh;
+  margin-left: 0vw;
+}
+
+#sp {
+  padding-left: 0.4vw;
+}
+
+footer{
+	padding-top:10px;
+	text-align:center;
+	font-size:10px;
+	color:LightSlateGrey;
+}
+
+.calculator {
+  background-color: rgb(191, 183, 174);
+  border-color: Black;
+  border-width: thick;
+  border-radius: 1vh;
+  width: 22.515vw;
+  height: 80vh;
+  display:inline-block;
+	font-size:1.2vh;
+}

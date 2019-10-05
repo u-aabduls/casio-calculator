@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="En">
+<head>
+  <meta charset="UTF-8">
+  <title> calculator </title>
+  <link rel="stylesheet" media="screen"
+          href="https://fontlibrary.org/face/segment7" type="text/css"/>
+  <link rel="stylesheet" type="text/css" href="calc.css" title="style"/>
+  <script src="calc.js"></script>
+</head>
+<body onload="display();">
+  <header>
+    <h1> calculator </h1>
+  </header>
+
+	<div class="calculator">
+    <div class="innnerFace">
+      <div class="displayBorder">
+    		<p id="calcDisplay"></p>
+      </div>
+      <div class="logo">
+        <div class="logo1">CASIO <i>fx-2500</i></div>
+        <div class="logo0"></div>
+        <div class="logo2">SCIENTIFIC CALCULATOR</div>
+      </div>
+      <div class="topLabels">
+        <div class="tL1">ON<br><p>|</p></div>
+        <div class="tL2">SD<br><p>|</p></div>
+        <div class="tL3">DEG RAD GRA<br>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| / /</p>
+        </div>
+      </div>
+      <div class="midGrid">
+        <div class="midGridBckgrnd">
+          <div class="powButt">
+            <button class="dblock1" onclick="powToggle()"></button>
+            <div class="dblock2"></div>
+          </div>
+          <div class="buttSpec mNA"><span id="mg2">INV</span><br>
+                                          <button></button></div>
+          <div class="buttSpec mNA"><span id="mg3">MODE</span><br>
+                        <button></button></div>
+          <div class="midButt mNA">log <span id="mg4">10</span><sup>
+                        <i>x</i></sup><br><button></button></div>
+          <div class="midButt mNA">ln <span id="mg5">e</span><sup>
+                        <i>x</i></sup><br><button></button></div>
+          <div class="midButt mNA"><i>X<span id="mg6"><sup>y</sup></span>
+                        <span id="mg7">X</span><sup>vy</sup></i><br>
+                        <button></button></div>
+          <div class="buttSpec">+/-<br><button onclick="setCoeff()">
+                        </button></div>
+          <div class="midButt">&radic; <i><span>x<sup>y</sup></span></i><br>
+                        <button onclick="setOp('sqrt')"></button></div>
+          <div class="buttSpec mNA">&deg; ' "<br><button></button></div>
+          <div class="midButt">sin<sup>-1</sup><br>
+                        <button onclick="setOp('sin')"></button></div>
+          <div class="midButt">cos<sup>-1</sup><br>
+                        <button onclick="setOp('cos')"></button></div>
+          <div class="midButt">tan<sup>-1</sup><br>
+                        <button onclick="setOp('tan')"></button></div>
+          <div class="midButt mNA">1<i>/x <span id="mg13">x!</span></i><br>
+                        <button></button><br><span id="ll">&Sigma;x
+                        <sup>2</sup></span></div>
+          <div class="midButt mNA">X--Y<span id="mg13">M</span><br>
+                        <button></button><br><span id="ll">&Sigma;x
+                        </span><span id="ff"><sup>i</sup></span></div>
+          <div class="midButt mNA">[(<br><button></button><br><span id="ll">n
+                        </span><span id="ff"><sup>i</sup></span></div>
+          <div class="midButt mNA">)]<br><button></button><br><span id="ll">
+                        X<span id="spec">&#771;</span></span><span id="ff">
+                        <sup>i</sup></span></div>
+          <div class="midButt mNA">M in<br><button></button><br>
+                        <span id="ll"><span id="spec">&sigma;</span> n</span>
+                        <span id="ff"><sup>i</sup></span></div>
+          <div class="midButt mNA">MR<br><button></button><br>
+                        <span id="ll"><span id="spec">&sigma;</span> n-1
+                        </span><span id="ff"><sup>i</sup></span></div></div>
+        </div>
+        <div class="calcKeypad">
+          <button onclick="buildOp(7)">7</button>
+          <button onclick="buildOp(8)">8</button>
+          <button onclick="buildOp(9)">9</button>
+          <button onclick="backspace()">C</button>
+          <button onclick="clr()">AC</button>
+          <button onclick="buildOp(4)">4</button>
+          <button onclick="buildOp(5)">5</button>
+          <button onclick="buildOp(6)">6</button>
+          <button onclick="setOp('*')">&times;</button>
+          <button onclick="setOp('/')">÷</button>
+          <button onclick="buildOp(1)">1</button>
+          <button onclick="buildOp(2)">2</button>
+          <button onclick="buildOp(3)">3</button>
+          <button onclick="setOp('+')">+</button>
+          <button onclick="setOp('-')">&minus;</button>
+          <button onclick="buildOp(0)">0</button>
+          <button onclick="buildOp('.')">.</button>
+          <button class="NA" id="sp"><p>EXP</p></button>
+          <button onclick="compute()">=</button>
+          <button class="NA">M+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer>&copy; Author: <span>Umar Abdulselam</span></footer>
+</body>
+</html>
