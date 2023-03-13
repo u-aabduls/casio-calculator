@@ -1,5 +1,3 @@
-# EECS3461
+# User Interfaces
 
-This is a private repository for coursework relating to EECS3461: User Interfaces.
-
-The contents of this repository will include projects, assignments, labs and lab work completed throughout the course of EECS3461. All contents in this repository are the work of Umar Abdulselam, 215995616 and are owned solely by the owner of this private repository.
+This project is an implementation of a digital Casio calculator. The stack used to implement this solution: HTML, JS, CSS.
